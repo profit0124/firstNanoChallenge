@@ -15,19 +15,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-//            ZVHStack()
-//            OnScreen()
-//            NavigationLinkView()
+
             MainView()
-//            Text("Your socre is \(progress.score)")
-//            SwiftUIView(progress: progress)
-//            ScrollView {
-//                LazyVStack {
-//                    ForEach(0..<300) { number in
-//                        Text("\(number)")
-//                    }
-//                }
-//            }
+
         }
     }
 }

@@ -8,13 +8,53 @@
 import SwiftUI
 
 struct ContentDetailView: View {
+    
+    @State var data: ContentModel
+    @State var count: Int = 2
+    @State var sheetToggle = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ScrollView {
+            ForEach(data.data, id: \.self) { i in
+                HStack{
+                    if i.contains("image") {
+                        Image(i)
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    else if (i.contains("link")) {
+                        let strIndex = i.index(i.startIndex, offsetBy: 5)
+                        Link("Go to Link", destination: URL(string: String(i[strIndex...]))!)
+                    }
+                    else {
+                        Text(i)
+                    }
+                    Spacer()
+                }
+                
+            }
+            
+        }.padding()
+            .navigationTitle(data.title)
+            .navigationBarTitleDisplayMode(.inline)
+        
+            .toolbar {
+                if data.example{
+                    Button("Example") {
+                        sheetToggle.toggle()
+                    }.sheet(isPresented: $sheetToggle) {
+                        RoutingView(titleName: data.category + "_" + data.title)
+                    }
+                }
+            }
+        
+            
+    }
+    func addCount() {
+        count += 1
     }
 }
 
-struct ContentDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentDetailView()
-    }
-}
+
+

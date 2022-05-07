@@ -1,63 +1,177 @@
 [
     {
-        "no" : 0,
-        "title": "ZStack, VStack, YStack",
+        "id" : 0,
+        "title": "ZStack, VStack, HStack",
         "category" : "SwiftUi",
-        "date" : [
-            "asdf",
-            "asdf",
-            "qwer",
-            "asdfasdfasdf",
-            "Image"
-        ]
+        "date" : "2022-04-24",
+        "data" : [
+            "기본적으로 View를 렌터하는 요소들을 쌓아주는 역할을 한다.",
+            "Stack - 기본적으로 '쌓는다'로 이해",
+            "HStack - Horizontal Stack, 수평으로 요소를 쌓는다.",
+            "VStack - Vertical Stack, 수직으로 요소를 쌓는다.",
+            "ZStack - 3차원의 Z방향으로, 평면에 수직 방향으로 요소를 쌓는다.",
+            "imageStack1",
+            "imageStack2"
+        ],
+        "imageName" : "stack",
+        "example" : true
     },
     {
-        "no" : 1,
+        "id" : 1,
+        "title": "List",
+        "category" : "SwiftUi",
+        "date" : "2022-04-24",
+        "data" : [
+            "일렬의 데이터를 행으로 보여주는 컨테이너이다.",
+            "EditButton() 을 사용하여 multi selection이 가능하게 만들 수 있다",
+            "imageList1",
+            "imageList2",
+            "또한 hierachy List 도 생성이 가능하다",
+            "imageList3",
+            "imageList4"
+        ],
+        "imageName" : "State",
+        "example" : true
+    },
+    {
+        "id" : 2,
         "title": "State, Binding",
         "category" : "SwiftUi",
-        "date" : [
-            "asdf",
-            "asdf",
-            "qwer",
-            "asdfasdfasdf",
-            "Image"
-        ]
+        "date" : "2022-04-29",
+        "data" : [
+            "데이터 흐름을 컨트롤 하고, 변화에 반응 하기 위해 사용한다.",
+            "변수에 State Wrapper를  사용을 함으로써 Swfit에서 State 변수에변화를 추적하여 view를 다시 Rendering 하게 한다.",
+            "또한 Structure간의 변수를 Binding하여 연결도 가능하다.",
+            "imageState1",
+            "imageState2",
+            "버튼을 클릭하여 num의 값을 1증가 시키면 그 내용이 Background view에 num과 InsideView에 BindingNum에 적용된다, ",
+            "noBindingNum의 경우 초기값만 매칭이 된 후 독릭적으로 작동한다."
+        ],
+        "imageName" : "State",
+        "example" : true
     },
     {
-        "no" : 2,
-        "title": "ObservableObject, ObservedObject, StateObject",
+        "id" : 3,
+        "title": "NavigationLink",
         "category" : "SwiftUi",
-        "date" : [
-            "asdf",
-            "asdf",
-            "qwer",
-            "asdfasdfasdf",
-            "Image"
-        ]
+        "date" : "2022-05-05",
+        "data" : [
+            "Navigation View 내부에 사용된다.",
+            "NavigationLink(“String Text”, destination: View())  사용한다.",
+            "클릭 시, 페이지가 바뀌는 개념이 아닌, NavigationView 내부 코드를 Destination코드로 쌓아 덮는 느낌이다.",
+            "NavigationView는 Stack으로 작동하는 것 같다.",
+            "예제 확인 후 Example을 확인하면 이해하기 쉽다.",
+            "imageNavigationLink1",
+            "imageNavigationLink2",
+            "테두리 쳐진 곳의 View만 변경이 되고 쌓여있는 NavigationView부터 외부까지의 영역엔 영향을 미치지 않는다."
+        ],
+        "imageName" : "NavigationLink",
+        "example" : true
     },
     {
-        "no" : 3,
-        "title": "Conditional, If else, Switch, Guard",
-        "category" : "SwiftUi",
-        "date" : [
-            "asdf",
-            "asdf",
-            "qwer",
-            "asdfasdfasdf",
-            "Image"
-        ]
+        "id" : 4,
+        "title": "List",
+        "category" : "자료구조",
+        "date" : "2022-05-05",
+        "data" : [
+            "리스트는 크게 두가지로 구분된다. 순차(Sequetial) List와 연결된(Linked) List 이다.",
+            "여기선 Sequential List를 다뤄본다.",
+            "데이터가 컴퓨터 메모리에 저장될 때, 저장 시작위치부터 빈자리 없이 순서대로 저장된단 뜻이다.",
+            "장점으로, 순서가 있기에 인덱싱이 가능하다.",
+            "그리고 Linked List 대비 탐색에 용이하다.",
+            "단점으로, 처음 배열의 크기를 정해 놓기 때문에 저장공간에 제약이 따른다.",
+            "그렇기에 자료가 없을 때 저장공간의 낭비가 발생할 수 있다.",
+            "imageDataStructureList1"
+    
+        ],
+        "imageName" : "",
+        "example" : true
     },
     {
-        "no" : 4,
-        "title": "Func, Argument, Return",
+        "id" : 5,
+        "title": "Queue",
+        "category" : "자료구조",
+        "date" : "2022-05-05",
+        "data" : [
+            "자료구조에서 FIFO(First In First Out) 에 해당",
+            "대표적인 예로 은행 번호표가 이에 해당",
+            "Enqueue: 큐에 맨 뒤에 요소 추가",
+            "Dequeue: 큐에 맨 앞 요소 삭제",
+            "Peek: front에 위치한 데이터를 읽음, 다음 위치 값 확인",
+            "Front: 큐의 맨 앞의 위치",
+            "Rear: 큐의 맨 뒤의 위치"
+        ],
+        "imageName" : "NavigationLink",
+        "example" : false
+    },
+    {
+        "id" : 6,
+        "title": "Stack",
+        "category" : "자료구조",
+        "date" : "2022-05-05",
+        "data" : [
+            "자료구조에서 FILO(First In Last Out) 에 해당",
+            "대표적인 예로 컴퓨터 프로세스",
+            "put: 마지막 위치에 데이터 삽입",
+            "pop: 마지막 위치에 데이터 뽑기",
+            "Peek: top 위치에 데이터 읽기, top의 변화 없음",
+            "imageDataStructureStack1"
+            
+        ],
+        "imageName" : "NavigationLink",
+        "example" : false
+    },
+    {
+        "id" : 7,
+        "title": "Linked List",
+        "category" : "자료구조",
+        "date" : "2022-05-05",
+        "data" : [
+            "선형 리스트와 달리 데이터 저장시 데이터와 Pointer를 함께 저장",
+            "데이터 추가시 Pointer에 추가된 데이터 주소값을 매칭 시킨다",
+            "배열 생성 시 사이즈를 정할 필요 없음",
+            "단, 포인터와 함께 저장하기에 저장 효율이 좋지 않음",
+            "데이터 삭제시 물리적으로 삭제된 데이터 뒤의 데이터를 앞으로 당길 필요 없음",
+            "기존 연결",
+            "imageDataStructureLinkedList1",
+            "새로운 데이터 입력",
+            "imageDataStructureLinkedList2",
+            "기존 데이터(Previous)와 새로운 데이터 연결",
+            "imageDataStructureLinkedList3",
+            "새로운 데이터와 기존 데이터(Next) 연결",
+            "imageDataStructureLinkedList4"
+            
+        ],
+        "imageName" : "NavigationLink",
+        "example" : false
+    },
+    {
+        "id" : 8,
+        "title": "func; Parameters and Return",
         "category" : "SwiftUi",
-        "date" : [
-            "asdf",
-            "qwer",
-            "asdfasdfasdf",
-            "asdf",
-            "Image"
-        ]
+        "date" : "2022-05-05",
+        "data" : [
+            "func 함수이름(인자명: 인자타입, 인자: 인자타입) -> 리턴타입 {return}",
+            "Example 사진은 Json파일 읽기(tutorial) ",
+            "imageFunction1",
+            "인자명 앞에 언더바는 인자명을 생략해도 된다는 의미"
+            
+        ],
+        "imageName" : "NavigationLink",
+        "example" : false
+    },
+    {
+        "id" : 9,
+        "title": "enum",
+        "category" : "SwiftUi",
+        "date" : "2022-05-05",
+        "data" : [
+            "서근 SwiftUI 블로그 확인",
+            "link https://seons-dev.tistory.com/98",
+            
+        ],
+        "imageName" : "NavigationLink",
+        "example" : false
     }
 
 ]

@@ -7,14 +7,26 @@
 
 import SwiftUI
 
+//MainView에 리스트 Component 그려주기
 struct ListComponentView: View {
+    @State var data: ContentModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(data.title.count > 20 ? data.title.prefix(20) + "..." : data.title)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                Text(data.category)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            Text(data.date)
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
     }
 }
 
-struct ListComponentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListComponentView()
-    }
-}
+

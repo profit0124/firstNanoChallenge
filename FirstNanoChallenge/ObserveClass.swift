@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class ObserveClass: ObservableObject {
+    @Published var score = 0
+}

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+struct TypeModel: Hashable, Codable, Identifiable {
+    var id: Int
+    var nameOfType: String
+    
+    
+}

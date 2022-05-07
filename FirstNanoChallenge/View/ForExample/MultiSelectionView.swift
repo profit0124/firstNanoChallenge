@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RefreshingListContent: View {
+struct MultiSelectionView: View {
     struct Ocean: Identifiable, Hashable {
         let name: String
         let id = UUID()
@@ -36,8 +36,8 @@ struct RefreshingListContent: View {
         }
     }
 }
-struct RefreshingListContent_Previews: PreviewProvider {
+struct MultiSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        RefreshingListContent()
+        MultiSelectionView()
     }
 }

@@ -8,14 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var progress = ObserveClass()
+
+    var myStack: Stack = Stack<Int>()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+//            ZVHStack()
+//            OnScreen()
+//            NavigationLinkView()
+            MainView()
+//            Text("Your socre is \(progress.score)")
+//            SwiftUIView(progress: progress)
+//            ScrollView {
+//                LazyVStack {
+//                    ForEach(0..<300) { number in
+//                        Text("\(number)")
+//                    }
+//                }
+//            }
+        }
     }
 }
 
+
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .preferredColorScheme(.dark)
+            
+        }
     }
 }

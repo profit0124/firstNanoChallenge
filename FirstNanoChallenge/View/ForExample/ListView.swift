@@ -8,8 +8,61 @@
 import SwiftUI
 
 struct ListView: View {
+    @State var optionToggle: Bool = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack() {
+            
+            HStack {
+                Button(action: {
+                    optionToggle = false
+                }){
+                    if optionToggle {
+                        ZStack {
+                            Rectangle()
+                                .stroke()
+                                .frame(width: 100, height: 50)
+                            Text("MultiSelct")
+                        }
+                    } else {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 100, height: 50)
+                            Text("MultiSelct")
+                                .foregroundColor(.white)
+                        }
+                    }
+                    
+                }
+                Button(action: {
+                    optionToggle = true
+                }){
+                    if optionToggle {
+                        ZStack {
+                            Rectangle()
+                                
+                                .frame(width: 100, height: 50)
+                            Text("Hierachy")
+                                .foregroundColor(.white)
+                        }
+                    } else {
+                        ZStack {
+                            Rectangle()
+                                .stroke()
+                                .frame(width: 100, height: 50)
+                            Text("Hierachy")
+                                
+                        }
+                    }
+                    
+                }
+            }
+            
+            if optionToggle {
+                ListExampleView()
+            } else {
+                MultiSelectionView()
+            }
+        }.padding()
     }
 }
 

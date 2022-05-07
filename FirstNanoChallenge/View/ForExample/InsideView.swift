@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct InsideView: View {
+    @Binding var bindingNum:Int
+    @State var noBindingNum: Int
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Inside Binding Num: \(bindingNum)")
+            Text("Inside noBinding Num: \(noBindingNum)")
+            
+            
+            Button(action: {
+                bindingNum += 1
+            }) {
+                Text(" Add 1 to bindingNum")
+            }
+            Button(action: {
+                noBindingNum += 1
+            }) {
+                Text(" Add 1 to noBindingNum")
+            }
+        }
+        
+        
     }
 }
 
-struct InsideView_Previews: PreviewProvider {
-    static var previews: some View {
-        InsideView()
-    }
-}
+

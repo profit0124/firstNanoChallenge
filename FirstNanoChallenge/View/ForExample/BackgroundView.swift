@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct BackgroundView: View {
+    @State var num:Int = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("OutSideView Number : \(num)")
+            Button(action: {
+                num += 1
+            }) {
+                Text("Background Button")
+                
+            }
+            Spacer()
+                .frame(height: 50)
+            InsideView(bindingNum: $num, noBindingNum: num)
+        }
+        
     }
 }
 
